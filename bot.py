@@ -454,7 +454,7 @@ async def start_bot():
             await try_qr_login()
 
     print("✅ Bot 已启动！转发视频到「已保存消息」自动下载")
-    print("   💡 发送 t.me 频道消息链接也可下载（支持禁止转发的频道）")
+    print("   🔓 发送 t.me 频道消息链接也可下载（即使频道设置了禁止转发/禁止保存！）")
     print(f"   下载目录: {DOWNLOAD_PATH}")
     if os.path.exists(qr_file):
         try:
