@@ -1,0 +1,24 @@
+services:
+  tg-bot:
+    image: tg-bot-downloader:latest
+    container_name: tg-bot
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      # Session 文件持久化（首次QR登录后自动生成）
+      - ./session.session:/app/session.session
+      # 下载目录，Bot 下载的视频存储位置
+      - ./downloads:/downloads
+    environment:
+      - TZ=Asia/Shanghai
+      # Telegram API 凭据（必需，通过 .env 或系统环境变量传入）
+      - TG_API_ID=${TG_API_ID}
+      - TG_API_HASH=${TG_API_HASH}
+      # 代理配置（可选，不用代理则留空）
+      - TG_PROXY_HOST=${TG_PROXY_HOST:-127.0.0.1}
+      - TG_PROXY_PORT=${TG_PROXY_PORT:-7890}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

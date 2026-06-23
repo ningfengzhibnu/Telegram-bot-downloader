@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1923;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2a3a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="step1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2AABEE" />
+      <stop offset="100%" style="stop-color:#229ED9" />
+    </linearGradient>
+    <linearGradient id="step2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35" />
+      <stop offset="100%" style="stop-color:#E55A2B" />
+    </linearGradient>
+    <linearGradient id="step3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00B4D8" />
+      <stop offset="100%" style="stop-color:#0096C7" />
+    </linearGradient>
+    <linearGradient id="step4Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ECC71" />
+      <stop offset="100%" style="stop-color:#27AE60" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowDown" markerWidth="8" markerHeight="12" refX="4" refY="10" orient="auto">
+      <path d="M0,0 L4,12 L8,0 Z" fill="#556677"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="860" height="420" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- 标题 -->
+  <text x="430" y="38" text-anchor="middle" fill="#E8EDF2" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">QR 码登录流程</text>
+  <text x="430" y="58" text-anchor="middle" fill="#8899AA" font-family="system-ui, sans-serif" font-size="12">无需手机号验证码，扫码即登</text>
+
+  <!-- ============ 步骤 1 ============ -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="85" width="185" height="270" rx="12" fill="#1E2A36"/>
+    <rect x="30" y="85" width="185" height="36" rx="12" fill="url(#step1Grad)"/>
+    <rect x="30" y="109" width="185" height="12" fill="url(#step1Grad)"/>
+  </g>
+  
+  <circle cx="55" cy="103" r="10" fill="#fff" opacity="0.25"/>
+  <text x="55" y="108" text-anchor="middle" fill="#fff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">1</text>
+  <text x="80" y="108" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Session 失效</text>
+
+  <!-- QR 码图标 -->
+  <rect x="80" y="145" width="85" height="85" rx="4" fill="#2AABEE" opacity="0.1"/>
+  <text x="122" y="165" text-anchor="middle" fill="#2AABEE" font-family="system-ui, sans-serif" font-size="40">⊞</text>
+  <text x="122" y="200" text-anchor="middle" fill="#2AABEE" font-family="system-ui, sans-serif" font-size="10">QR Code</text>
+
+  <text x="122" y="255" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">session.session</text>
+  <text x="122" y="273" text-anchor="middle" fill="#FF6B6B" font-family="system-ui, sans-serif" font-size="12">过期 / 不存在</text>
+
+  <rect x="55" y="295" width="135" height="30" rx="6" fill="#2AABEE" opacity="0.12"/>
+  <text x="122" y="314" text-anchor="middle" fill="#2AABEE" font-family="system-ui, sans-serif" font-size="11">🔄 生成新 QR 码</text>
+
+  <!-- 箭头 1→2 -->
+  <line x1="215" y1="220" x2="245" y2="220" stroke="#556677" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- ============ 步骤 2 ============ -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="85" width="185" height="270" rx="12" fill="#1E2A36"/>
+    <rect x="250" y="85" width="185" height="36" rx="12" fill="url(#step2Grad)"/>
+    <rect x="250" y="109" width="185" height="12" fill="url(#step2Grad)"/>
+  </g>
+  
+  <circle cx="275" cy="103" r="10" fill="#fff" opacity="0.25"/>
+  <text x="275" y="108" text-anchor="middle" fill="#fff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">2</text>
+  <text x="300" y="108" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">扫描二维码</text>
+
+  <!-- 手机 + 扫码 -->
+  <rect x="300" y="140" width="85" height="140" rx="10" fill="#FF6B35" opacity="0.08"/>
+  <rect x="308" y="148" width="69" height="124" rx="6" fill="#FF6B35" opacity="0.06"/>
+  <rect x="330" y="154" width="25" height="3" rx="1.5" fill="#FF6B35" opacity="0.3"/>
+  <!-- 手机屏幕上的扫码示意 -->
+  <rect x="316" y="168" width="53" height="53" rx="4" fill="#FF6B35" opacity="0.1"/>
+  <line x1="326" y1="178" x2="336" y2="178" stroke="#FF6B35" stroke-width="1.5" opacity="0.4"/>
+  <line x1="326" y1="185" x2="332" y2="185" stroke="#FF6B35" stroke-width="1.5" opacity="0.4"/>
+  <line x1="346" y1="178" x2="359" y2="178" stroke="#FF6B35" stroke-width="1.5" opacity="0.4"/>
+  <line x1="353" y1="185" x2="359" y2="185" stroke="#FF6B35" stroke-width="1.5" opacity="0.4"/>
+  <line x1="326" y1="208" x2="336" y2="208" stroke="#FF6B35" stroke-width="1.5" opacity="0.4"/>
+  <line x1="346" y1="208" x2="359" y2="208" stroke="#FF6B35" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- 手机底部按钮 -->
+  <circle cx="342" cy="260" r="5" fill="none" stroke="#FF6B35" stroke-width="1" opacity="0.3"/>
+
+  <text x="342" y="310" text-anchor="middle" fill="#FF6B35" font-family="system-ui, sans-serif" font-size="11">📱 Telegram App</text>
+  <text x="342" y="330" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="10">设置 → 设备 → 扫码</text>
+
+  <!-- 箭头 2→3 -->
+  <line x1="435" y1="220" x2="465" y2="220" stroke="#556677" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- ============ 步骤 3 ============ -->
+  <g filter="url(#shadow)">
+    <rect x="470" y="85" width="185" height="270" rx="12" fill="#1E2A36"/>
+    <rect x="470" y="85" width="185" height="36" rx="12" fill="url(#step3Grad)"/>
+    <rect x="470" y="109" width="185" height="12" fill="url(#step3Grad)"/>
+  </g>
+  
+  <circle cx="495" cy="103" r="10" fill="#fff" opacity="0.25"/>
+  <text x="495" y="108" text-anchor="middle" fill="#fff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">3</text>
+  <text x="520" y="108" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">确认登录</text>
+
+  <!-- 确认勾 -->
+  <circle cx="562" cy="175" r="30" fill="#00B4D8" opacity="0.12"/>
+  <path d="M545,175 L555,188 L580,162" stroke="#00B4D8" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="562" y="230" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">Telegram 确认</text>
+  <text x="562" y="250" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">登录请求</text>
+
+  <rect x="510" y="275" width="105" height="30" rx="6" fill="#00B4D8" opacity="0.12"/>
+  <text x="562" y="295" text-anchor="middle" fill="#00B4D8" font-family="system-ui, sans-serif" font-size="11">✅ 确认登录</text>
+
+  <!-- 箭头 3→4 -->
+  <line x1="655" y1="220" x2="685" y2="220" stroke="#556677" stroke-width="2" marker-end="url(#arrowDown)"/>
+
+  <!-- ============ 步骤 4 ============ -->
+  <g filter="url(#shadow)">
+    <rect x="690" y="85" width="155" height="270" rx="12" fill="#1E2A36"/>
+    <rect x="690" y="85" width="155" height="36" rx="12" fill="url(#step4Grad)"/>
+    <rect x="690" y="109" width="155" height="12" fill="url(#step4Grad)"/>
+  </g>
+  
+  <circle cx="713" cy="103" r="10" fill="#fff" opacity="0.25"/>
+  <text x="713" y="108" text-anchor="middle" fill="#fff" font-family="system-ui, sans-serif" font-size="12" font-weight="bold">4</text>
+  <text x="738" y="108" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Bot 就绪</text>
+
+  <path d="M730,155 L740,165 L760,140" stroke="#2ECC71" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <text x="767" y="195" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">Session 已保存</text>
+  <text x="767" y="215" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">Bot 开始监听</text>
+  <text x="767" y="235" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">已保存消息</text>
+
+  <rect x="712" y="265" width="110" height="40" rx="8" fill="#2ECC71" opacity="0.12"/>
+  <text x="767" y="283" text-anchor="middle" fill="#2ECC71" font-family="system-ui, sans-serif" font-size="11">▶ 正常运行中</text>
+  <text x="767" y="298" text-anchor="middle" fill="#2ECC71" font-family="system-ui, sans-serif" font-size="10">重启无需再次登录</text>
+
+  <!-- Footer -->
+  <text x="430" y="400" text-anchor="middle" fill="#556677" font-family="system-ui, sans-serif" font-size="11">整个过程无需手机号验证码，Session 持久化后重启容器也不需重新登录</text>
+</svg>

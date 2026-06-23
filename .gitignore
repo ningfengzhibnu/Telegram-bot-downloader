@@ -1,0 +1,22 @@
+# Telegram 登录会话（包含个人账号信息，绝不能提交！）
+session.session
+session.session.*
+
+# 本地环境变量配置（包含 API 密钥等敏感信息）
+.env
+
+# 下载目录（用户下载的视频文件）
+/downloads/
+downloads/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# QR 码登录图片（临时文件）
+tg-bot-login-qr.png

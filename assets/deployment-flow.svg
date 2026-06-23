@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 320">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1923;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2a3a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowRight" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7 Z" fill="#556677"/>
+    </marker>
+    <!-- 卡片颜色 -->
+    <linearGradient id="c1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2AABEE" />
+      <stop offset="100%" style="stop-color:#229ED9" />
+    </linearGradient>
+    <linearGradient id="c2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B59B6" />
+      <stop offset="100%" style="stop-color:#8E44AD" />
+    </linearGradient>
+    <linearGradient id="c3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2496ED" />
+      <stop offset="100%" style="stop-color:#1D7CC8" />
+    </linearGradient>
+    <linearGradient id="c4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ECC71" />
+      <stop offset="100%" style="stop-color:#27AE60" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="860" height="320" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- 标题 -->
+  <text x="430" y="40" text-anchor="middle" fill="#E8EDF2" font-family="system-ui, sans-serif" font-size="18" font-weight="bold">一键部署流程</text>
+  <text x="430" y="60" text-anchor="middle" fill="#8899AA" font-family="system-ui, sans-serif" font-size="12">从零开始，三步启动你的 Telegram 下载机器人</text>
+
+  <!-- ============ 步骤 1 ============ -->
+  <g filter="url(#shadow)">
+    <rect x="25" y="90" width="185" height="190" rx="12" fill="#1E2A36"/>
+    <rect x="25" y="90" width="185" height="42" rx="12" fill="url(#c1)"/>
+    <rect x="25" y="120" width="185" height="12" fill="url(#c1)"/>
+  </g>
+  
+  <circle cx="50" cy="111" r="10" fill="#fff" opacity="0.25"/>
+  <text x="50" y="116" text-anchor="middle" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">1</text>
+  <text x="72" y="116" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">获取凭据</text>
+
+  <text x="117" y="160" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">访问 my.telegram.org</text>
+  
+  <rect x="45" y="178" width="145" height="30" rx="6" fill="#2AABEE" opacity="0.08"/>
+  <text x="117" y="197" text-anchor="middle" fill="#2AABEE" font-family="system-ui, sans-serif" font-size="11">🔑 获取 API ID</text>
+  
+  <rect x="45" y="214" width="145" height="30" rx="6" fill="#2AABEE" opacity="0.08"/>
+  <text x="117" y="233" text-anchor="middle" fill="#2AABEE" font-family="system-ui, sans-serif" font-size="11">🔑 获取 API Hash</text>
+
+  <!-- 箭头 1→2 -->
+  <line x1="210" y1="185" x2="235" y2="185" stroke="#556677" stroke-width="2" marker-end="url(#arrowRight)"/>
+
+  <!-- ============ 步骤 2 ============ -->
+  <g filter="url(#shadow)">
+    <rect x="240" y="90" width="185" height="190" rx="12" fill="#1E2A36"/>
+    <rect x="240" y="90" width="185" height="42" rx="12" fill="url(#c2)"/>
+    <rect x="240" y="120" width="185" height="12" fill="url(#c2)"/>
+  </g>
+  
+  <circle cx="265" cy="111" r="10" fill="#fff" opacity="0.25"/>
+  <text x="265" y="116" text-anchor="middle" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">2</text>
+  <text x="287" y="116" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">配置环境</text>
+
+  <text x="332" y="150" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">编辑 .env 文件</text>
+  
+  <!-- 代码行 -->
+  <rect x="260" y="165" width="145" height="18" rx="3" fill="#9B59B6" opacity="0.1"/>
+  <text x="332" y="178" text-anchor="middle" fill="#9B59B6" font-family="monospace" font-size="9">TG_API_ID=123456</text>
+  
+  <rect x="260" y="187" width="145" height="18" rx="3" fill="#9B59B6" opacity="0.1"/>
+  <text x="332" y="200" text-anchor="middle" fill="#9B59B6" font-family="monospace" font-size="9">TG_API_HASH=abc...</text>
+  
+  <rect x="260" y="209" width="145" height="18" rx="3" fill="#9B59B6" opacity="0.1"/>
+  <text x="332" y="222" text-anchor="middle" fill="#9B59B6" font-family="monospace" font-size="9">PROXY_HOST=...</text>
+
+  <text x="332" y="248" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="11">支持代理配置</text>
+
+  <!-- 箭头 2→3 -->
+  <line x1="425" y1="185" x2="450" y2="185" stroke="#556677" stroke-width="2" marker-end="url(#arrowRight)"/>
+
+  <!-- ============ 步骤 3 ============ -->
+  <g filter="url(#shadow)">
+    <rect x="455" y="90" width="185" height="190" rx="12" fill="#1E2A36"/>
+    <rect x="455" y="90" width="185" height="42" rx="12" fill="url(#c3)"/>
+    <rect x="455" y="120" width="185" height="12" fill="url(#c3)"/>
+  </g>
+  
+  <circle cx="480" cy="111" r="10" fill="#fff" opacity="0.25"/>
+  <text x="480" y="116" text-anchor="middle" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">3</text>
+  <text x="502" y="116" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">启动容器</text>
+
+  <text x="547" y="150" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="12">一行命令搞定</text>
+
+  <!-- 终端风格 -->
+  <rect x="470" y="165" width="155" height="60" rx="6" fill="#0A0E14"/>
+  <text x="478" y="183" fill="#2ECC71" font-family="monospace" font-size="11">$ bash build.sh</text>
+  <text x="478" y="200" fill="#AABBCC" font-family="monospace" font-size="10">→ docker build...</text>
+  <text x="478" y="215" fill="#AABBCC" font-family="monospace" font-size="10">→ docker compose up</text>
+
+  <text x="547" y="252" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="11">或手动 docker compose up -d</text>
+
+  <!-- 箭头 3→4 -->
+  <line x1="640" y1="185" x2="665" y2="185" stroke="#556677" stroke-width="2" marker-end="url(#arrowRight)"/>
+
+  <!-- ============ 步骤 4 ============ -->
+  <g filter="url(#shadow)">
+    <rect x="670" y="90" width="170" height="190" rx="12" fill="#1E2A36"/>
+    <rect x="670" y="90" width="170" height="42" rx="12" fill="url(#c4)"/>
+    <rect x="670" y="120" width="170" height="12" fill="url(#c4)"/>
+  </g>
+  
+  <circle cx="693" cy="111" r="10" fill="#fff" opacity="0.25"/>
+  <text x="693" y="116" text-anchor="middle" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">4</text>
+  <text x="715" y="116" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">扫码登录</text>
+
+  <!-- QR 码 -->
+  <rect x="720" y="145" width="70" height="70" rx="4" fill="#2ECC71" opacity="0.06"/>
+  <rect x="728" y="153" width="54" height="54" fill="none" stroke="#2ECC71" stroke-width="1.2" opacity="0.3"/>
+  <!-- 简单 QR 图案 -->
+  <rect x="732" y="157" width="8" height="8" fill="#2ECC71" opacity="0.6"/>
+  <rect x="744" y="157" width="8" height="8" fill="#2ECC71" opacity="0.4"/>
+  <rect x="756" y="157" width="8" height="8" fill="#2ECC71" opacity="0.6"/>
+  <rect x="732" y="169" width="8" height="8" fill="#2ECC71" opacity="0.5"/>
+  <rect x="744" y="169" width="8" height="8" fill="#2ECC71" opacity="0.3"/>
+  <rect x="756" y="169" width="8" height="8" fill="#2ECC71" opacity="0.5"/>
+  <rect x="740" y="181" width="8" height="8" fill="#2ECC71" opacity="0.4"/>
+  <rect x="756" y="181" width="8" height="8" fill="#2ECC71" opacity="0.6"/>
+  <rect x="732" y="193" width="8" height="8" fill="#2ECC71" opacity="0.6"/>
+  <rect x="748" y="193" width="8" height="8" fill="#2ECC71" opacity="0.4"/>
+  <rect x="756" y="193" width="8" height="8" fill="#2ECC71" opacity="0.5"/>
+
+  <text x="755" y="240" text-anchor="middle" fill="#2ECC71" font-family="system-ui, sans-serif" font-size="11">✅ Bot 运行中</text>
+  <text x="755" y="258" text-anchor="middle" fill="#AABBCC" font-family="system-ui, sans-serif" font-size="10">开始下载视频！</text>
+
+  <!-- Footer -->
+  <text x="430" y="305" text-anchor="middle" fill="#556677" font-family="system-ui, sans-serif" font-size="11">整个过程仅需几分钟，无需手动安装 Python 依赖，容器化一键部署</text>
+</svg>
